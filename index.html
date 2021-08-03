@@ -4,14 +4,51 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <title>走马灯</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="cover.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
+    <div class="site-wrapper" id="file-select-win">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="inner cover">
+            <h1 class="cover-heading">图片预览</h1>
+            <p class="lead">流畅、自然、随心所欲</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default" onclick="openFileWin()" id="btn-open-file">开始体验</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main hide" id="file-show-win">
+        <img class="img" id="img" src="">
+    </div>
+
+    <div class="container-fluid hide">
+      <div class="row-fluid">
+        <div class="col-xs-3 col-md-3">
+          <a href="#">
+            <img class="img" id="img" class="img-rounded" src="">
+          </a>
+        </div>
+        <div class="col-xs-3 col-md-3">
+          <a href="#">
+            <img class="img" id="img" class="img-rounded" src="">
+          </a>
+        </div>
+      </div>
+    </div>
+    
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>
