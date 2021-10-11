@@ -20,6 +20,6 @@
   "devDependencies": {
     "electron": "^13.1.7",
     "bootstrap": "3",
-    "electron-builder": "^22.4.1"
+    "electron-builder": "^22.13.1"
   }
 }
